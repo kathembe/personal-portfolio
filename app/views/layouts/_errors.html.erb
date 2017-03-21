@@ -1,0 +1,8 @@
+<% if @skill.errors.any? %>
+  <h3>There are errors.Please try again</h3>
+    <ul>
+      <% @skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %> 
