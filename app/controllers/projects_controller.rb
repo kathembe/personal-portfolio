@@ -14,6 +14,29 @@ class ProjectsController < ApplicationController
      end
    end
 
+   def edit
+     @skill = Skill.find(params[:skill_id])
+     @project = @skill.projects.find(params[:id])
+   end
+
+   def update
+     @skill = Skill.find(params[:skill_id])
+     @project = @skill.projects.find(params[:id])
+     if @project.update(project_params)
+       redirect_to skill_path(@project.skill)
+     else
+       render :edit
+     end
+   end
+
+   def destroy
+     @skill = Skill.find(params[:skill_id])
+     @project = @skill.projects.find(params[:id])
+     @project.destroy
+     redirect_to skill_path(@project.skill)
+   end
+
+
    private
     def project_params
       params.require(:project).permit(:name, :description, :features)

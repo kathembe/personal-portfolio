@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ .container-fluid{
+   margin-right: 10%;
+   margin-left: 10%;
+ }
