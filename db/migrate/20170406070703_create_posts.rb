@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.column :title, :string
       t.column :story, :text
 
-      timestamps
+      t.timestamps
     end
   end
 end

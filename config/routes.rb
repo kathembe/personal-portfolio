@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :skills do
     resources :projects
   end
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   root "skills#index"
 end
