@@ -1,0 +1,17 @@
+<%= form_for @recommendation do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :org %>
+  <%= f.text_field :org %>
+
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+
+  <%= f.label :recommendation %>
+  <%= f.text_field :message %>
+  <%= f.submit  %>
+<% end %>

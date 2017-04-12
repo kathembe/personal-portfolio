@@ -1,0 +1,9 @@
+<h2>Recommendations</h2>
+
+<ul>
+  <% @recommendations.each do |recommendation| %>
+    <li><%= link_to recommendation.name, recommendation_path(recommendation) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Recommendation", new_recommendation_path %>

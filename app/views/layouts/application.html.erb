@@ -9,8 +9,30 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+      <div class="nav nav-tabs nav-justified">
+
+        <div class="tab">
+          <%= link_to "Home", skills_path %>
+        </div>
+
+        <div class="tab">
+          <%= link_to "Blog", posts_path %>
+        </div>
+
+        <div class="tab">
+          <%= link_to "Recommendations", recommendations_path %>
+        </div>
+
+      </div>
+    </nav>
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

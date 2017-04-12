@@ -1,0 +1,12 @@
+<p><%= @recommendation.name %></p>
+<p><%= @recommendation.email %></p>
+<p><%= @recommendation.org %></p>
+<p><%= @recommendation.position %></p>
+<p><%= @recommendation.message %></p>
+
+<p><%= link_to "Edit", edit_recommendation_path(@recommendation) %></p>
+<p><%= link_to "Delete", recommendation_path(@recommendation),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} %></p>
+
+<p><%= link_to "Return to Recommendations", recommendations_path %></p>

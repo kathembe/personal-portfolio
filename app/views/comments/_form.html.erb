@@ -1,0 +1,9 @@
+<%= form_for [@post, @comment] do |f|%>
+
+  <%= f.label :Your_name %>
+  <%= f.text_field :name %>
+
+  <%= f.text_field :comment, placeholder: "write a comment" %>
+
+  <p><%= f.submit %></p>
+<% end %>

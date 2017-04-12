@@ -1,11 +1,40 @@
-<div class="container-fluid">
-  <h1>Skills</h1>
-    <ul>
-      <% @skills.each do |skill| %>
-        <li><%= link_to skill.name, skill_path(skill) %></li>
-      <% end %>
-    </ul>
 
-   <hr>
-    <!-- <%= link_to "New Skill", new_skill_path %> -->
-</div>
+  <div class="landing">
+    <div class="name">
+      <h2>Simon Kathembe</h2>
+    </div>
+
+    <div class="ppic">
+      <%= image_tag 'me.jpg'%>
+    </div>
+
+  </div>
+
+  <div class="about">
+    <h3>About</h3>
+    <p>Simon Kathembe is a software developer and a business enthusiast. Simon
+      is currently a student in Moringa School and also BCom graduate from The
+      University of Nairobi. He has a lot of exposure and experience in the
+      fields of  Design, Technology, Business and Data Science.Apart from
+      software development, His  interests are in Business Analytics and
+      Agri-business. His  hobbies run from swimming to playing pool-table and
+      chess and also travelling.
+</p>
+  </div>
+
+  <div class="skills">
+    <h3>Skills</h3>
+      <div class="slist">
+        <ul>
+          <% @skills.each do |skill| %>
+            <li><%= link_to skill.name, skill_path(skill) %></li>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
+
+
+  <div class="contacts">
+    <h3>Contacts</h3>
+  </div>

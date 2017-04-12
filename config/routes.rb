@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "skills#index"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :skills do
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-  root "skills#index"
+  resources :recommendations
 end

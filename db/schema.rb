@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407091655) do
+ActiveRecord::Schema.define(version: 20170411051307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,8 @@ ActiveRecord::Schema.define(version: 20170407091655) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "comment"
+    t.text     "comment"
+    t.string   "name"
     t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -60,6 +61,12 @@ ActiveRecord::Schema.define(version: 20170407091655) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "profs", force: :cascade do |t|
+    t.text     "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -67,6 +74,16 @@ ActiveRecord::Schema.define(version: 20170407091655) do
     t.integer  "skill_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "recommendations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "org"
+    t.string   "position"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
